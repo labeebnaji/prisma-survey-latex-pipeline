@@ -105,4 +105,5 @@ flow numbers.
 
 The abstract, the contribution list, the methodology, the results tables, and the figure must use the
 same value for the same quantity. Run `number_audit.py` after any edit to the corpus or the tables;
-the audit fails on any quantity it cannot trace to a file.
+the failure mode observed in practice is a corpus that grew (duplicates surviving a v1/v2 preprint
+pair) while the prose kept the older count.
