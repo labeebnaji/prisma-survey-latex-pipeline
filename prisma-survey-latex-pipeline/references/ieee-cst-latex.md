@@ -82,8 +82,8 @@ Text that wraps inside the fixed column & \textbullet & \textoc & -- & n/a & \te
 ```latex
 \begin{tabular}{@{}p{0.07\textwidth}p{0.85\textwidth}@{}}
 \toprule
-C1 & Criterion text \\
-C2 & Criterion text \\
+C1 & Each level is defined by observable properties, not by stated intent. \\
+C2 & A level assignment cites at least one artefact per domain. \\
 \bottomrule
 \end{tabular}
 ```

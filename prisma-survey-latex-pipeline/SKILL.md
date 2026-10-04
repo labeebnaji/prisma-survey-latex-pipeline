@@ -49,7 +49,7 @@ survey/                # topic shortname
     evidence/          # dedup_log.csv, tiering_decisions.csv, screening_summary.csv,
                        # venue_resolution.csv, corpus_counts.json
   manuscript/          # main.tex, sections.tex, appendix.tex, references.bib
-  figures/             # prisma_flow.pdf, tier_bar.pdf, ...
+  figures/             # prisma_flow.pdf, tier_bar.pdf
   figures_src/         # the generating spec, committed for reproducibility
   review/round1/       # audit findings, one file per review line
   tmp/                 # scratch; safe to delete
@@ -86,7 +86,8 @@ instance for a different topic; copy its shape and replace the strings.
 
 ```
 # searches/queries.json
-[{"id": "S1", "tool": "search_crossref", "query": "...", "max_results": 150}]
+[{"id": "S1", "tool": "search_crossref",
+  "query": "hallucination detection clinical text large language model", "max_results": 150}]
 
 python scripts/run_searches.py --config searches/queries.json --outdir searches
 ```
@@ -142,7 +143,7 @@ python scripts/screen_tiers.py --corpus corpus/corpus_all.json --rules protocol/
 any of its terms. A bare string list under `and` requires all of them, which usually selects nothing.
 
 The step also writes `corpus/evidence/screening_summary.csv` (`screen_pass1`, `screen_tierA`,
-`screen_pass1_excluded`, `screen_included`, `screen_no_abstract`, ...) and exits 1 when the funnel does
+`screen_pass1_excluded`, `screen_included`, `screen_no_abstract`) and exits 1 when the funnel does
 not close, so the PRISMA diagram is never redrawn from numbers read off the console. Records lacking an
 abstract cannot be screened on abstract; report them as a limitation. `tiering_decisions.csv` keeps the
 matched terms per record so a reviewer can replay any decision.
@@ -193,7 +194,7 @@ find the nearest 10-15 competing papers and fetch their abstracts (Crossref abst
 even when the venue page is paywalled):
 
 ```
-python scripts/mcp_client.py '{"tool":"get_crossref_paper_by_doi","args":{"doi":"10.xxxx/yyyy"}}'
+python scripts/mcp_client.py '{"tool":"get_crossref_paper_by_doi","args":{"doi":"10.1007/s10922-021-00956-4"}}'
 ```
 
 Score overlap per competitor and classify FATAL / SERIOUS / MANAGEABLE, writing
