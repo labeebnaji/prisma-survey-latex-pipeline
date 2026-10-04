@@ -1,0 +1,23 @@
+{
+  "pass1": {
+    "any": ["hallucinat", "factuality", "fact-check", "fact checking", "unsupported claim",
+            "fabricat", "citation fidelity", "groundedness", "veracity"]
+  },
+  "tierA": {
+    "any": ["hallucinat", "factuality", "unsupported claim", "citation fidelity", "groundedness"],
+    "and": [["clinic", "medical", "biomed", "health record", "radiolog", "patholog", "oncolog",
+             "clinical note", "physician"]]
+  },
+  "tierB": {
+    "any": ["clinical", "medical", "biomed", "healthcare", "electronic health record",
+            "radiolog", "patholog", "nursing", "oncolog"]
+  },
+  "tierC": {
+    "any": ["benchmark", "evaluation framework", "detector", "retrieval-augmented", "attribution",
+            "reference-based", "natural language inference", "question answering", "summarization"]
+  },
+  "exclude": {
+    "any": ["image generation", "speech synthesis", "drug discovery", "genomic sequence",
+            "autonomous driving", "recommendation system", "code generation"]
+  }
+}

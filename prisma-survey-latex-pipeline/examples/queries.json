@@ -1,0 +1,14 @@
+[
+  {"id": "S1", "tool": "search_crossref", "query": "hallucination detection clinical text large language model", "max_results": 150},
+  {"id": "S2", "tool": "search_crossref", "query": "fact checking biomedical natural language generation", "max_results": 150},
+  {"id": "S3", "tool": "search_crossref", "query": "unsupported claim medical LLM output evaluation", "max_results": 150},
+  {"id": "S4", "tool": "search_openalex", "query": "hallucination clinical large language model", "max_results": 150},
+  {"id": "S5", "tool": "search_openalex", "query": "factuality assessment biomedical text generation", "max_results": 150},
+  {"id": "S6", "tool": "search_pubmed", "query": "hallucination AND large language model AND clinical notes", "max_results": 150},
+  {"id": "S7", "tool": "search_europepmc", "query": "(hallucination OR factuality) AND (clinical OR medical) AND \"large language model\"", "max_results": 150},
+  {"id": "S8", "tool": "search_arxiv", "query": "all:hallucination detection clinical language model", "max_results": 150},
+  {"id": "S9", "tool": "search_semantic", "query": "hallucination detection in clinical text generation", "max_results": 150},
+  {"id": "S10", "tool": "search_doaj", "query": "fact checking medical large language model", "max_results": 150},
+  {"id": "S11", "tool": "search_core", "query": "clinical hallucination evaluation LLM", "max_results": 150},
+  {"id": "S12", "tool": "search_pmc", "query": "hallucination large language model clinical", "max_results": 150}
+]

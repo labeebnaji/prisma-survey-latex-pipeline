@@ -1,0 +1,42 @@
+{
+  "prisma": {
+    "out": "prisma_flow.pdf",
+    "boxes": [
+      {
+        "title": "Identification",
+        "lines": ["Records identified from {search_sources} sources ({search_query_files} queries)",
+                  "n = {search_raw_total}"],
+        "side": ["Records removed by", "DOI/title de-duplication", "n = {dedup_duplicates_removed}"]
+      },
+      {
+        "title": "Screening",
+        "lines": ["Unique records screened on title and abstract", "n = {screen_unique_in}",
+                  "Records passing title screen: n = {screen_pass1}"],
+        "side": ["Excluded at screening", "n = {screen_pass1_excluded}"]
+      },
+      {
+        "title": "Retrieved for detailed evaluation",
+        "lines": ["Tier A + Tier B + Tier C", "n = {screen_included}"],
+        "side": ["Tier C set aside as", "context only", "n = {screen_tierC}"]
+      },
+      {
+        "title": "Included",
+        "lines": ["Studies included in the synthesis (Tier A)", "n = {screen_tierA}"]
+      }
+    ]
+  },
+  "bar": {
+    "out": "tier_bar.pdf",
+    "title": "Screening outcome by tier",
+    "categories": ["Tier A", "Tier B", "Tier C"],
+    "values": ["{screen_tierA}", "{screen_tierB}", "{screen_tierC}"],
+    "ylabel": "studies"
+  },
+  "hexagon": {
+    "out": "framework_ring.pdf",
+    "center": "Reference framework",
+    "domains": ["D1 Subject and credential", "D2 Policy and enforcement", "D3 Data and placement",
+                "D4 Network and segmentation", "D5 Observability and analytics",
+                "D6 Governance and improvement"]
+  }
+}
